@@ -145,26 +145,26 @@ async function main() {
 
     //add avn event listener to previous and next
     previous.addEventListener("click", () => {
-    currentIndex--;
+        currentIndex--;
 
-    if (currentIndex < 0) {
-        currentIndex = songs.length - 1;
-    }
+        if (currentIndex < 0) {
+            currentIndex = songs.length - 1;
+        }
 
-    playMusic(songs[currentIndex]);
-});
+        playMusic(songs[currentIndex]);
+    });
 
 
 
-   next.addEventListener("click", () => {
-    currentIndex++;
+    next.addEventListener("click", () => {
+        currentIndex++;
 
-    if (currentIndex >= songs.length) {
-        currentIndex = 0; // loop back
-    }
+        if (currentIndex >= songs.length) {
+            currentIndex = 0; // loop back
+        }
 
-    playMusic(songs[currentIndex]);
-});
+        playMusic(songs[currentIndex]);
+    });
 
     //Add an event to volume
     document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change", (e) => {
